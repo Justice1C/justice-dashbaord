@@ -105,6 +105,8 @@ const Navbar = ({ setOPen, open }) => {
      </div>
    
       </div>
+
+      
    
    
     </nav>

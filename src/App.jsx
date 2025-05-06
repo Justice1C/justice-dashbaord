@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-<div className='bg-gray-900 flex'>
+<div className='bg-gray-900 flex h-full '>
    <SideBar open={open} />
     <Main setOPen={setOPen} open={open}/>
     </div>

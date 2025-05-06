@@ -5,7 +5,7 @@ import blackman from '../assets/blackman.jpg'
 
 const Tickets = () => {
   return (
-  <main className=' space-y-3 rounded-md  h-[950px]'>
+  <main className=' space-y-3 rounded-md  h-full'>
    
    <section className='bg-gray-700 shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] rounded-md px-4 py-2' >
    <header className=' py-3'> 
