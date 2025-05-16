@@ -10,24 +10,30 @@ import { FaPlay } from "react-icons/fa";
 
 
 const SideBar = ({open}) => {
+  
+
+
+
   return (
-    <div className={`
+    <div  className={` hover:w-[300px]
       ${open ? 'w-[300px]' : 'w-[50px]'} 
-      transition-all duration-700 ease-in-out 
-      bg-gray-800 
-      shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] px-2 py-2 scroll-auto 
-    `}>
+      transition-all  duration-700 ease-in-out 
+      bg-gray-800  h-screen 
+      shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] 
+       px-2  overflow-y-auto overflow-x-hidden  relative top-0 bottom-0 left-0
+    
+    `} >
 
 <div className='flex items-center space-x-5  bg-gray-800 
-      shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] '>
+      shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] sticky w-full top-0 mt-[-10px] left-0.5'>
 <h1 className='text-4xl font-extrabold p-1'>J</h1>
-  <h2 className='text-blue-500 overflow-hidden truncate  '>
+  <h2 className='text-blue-500 truncate  '>
 
 Vuse Admin
 </h2>
   <hr />
 </div>
-<ul className='overflow-hidden'> 
+<ul className=''> 
         <li className='py-2 px-1  mt-4'>
           <a href="" className='flex justify-between items-center'>
             <div className='flex space-x-5 items-center'>
@@ -132,6 +138,30 @@ Vuse Admin
             <div className='flex space-x-5 items-center'>
             <h2 className=''>PR</h2>
          <span className='truncate text-sm text-white '>Programmatic Scrolling</span>  
+         </div>
+          </a>
+          </li>
+          <li className='py-2 px-1 '>
+          <a href="" className='flex justify-between items-center'>
+            <div className='flex space-x-5 items-center'>
+         < FaPlay  className='text-white text-xl'/>
+         <span className='truncate text-sm text-white '>Motion</span>  
+         </div>
+          </a>
+          </li>
+          <li className='py-2 px-1 '>
+          <a href="" className='flex justify-between items-center'>
+            <div className='flex space-x-5 items-center'>
+         < FaPlay  className='text-white text-xl'/>
+         <span className='truncate text-sm text-white '>Motion</span>  
+         </div>
+          </a>
+          </li>
+          <li className='py-2 px-1 '>
+          <a href="" className='flex justify-between items-center'>
+            <div className='flex space-x-5 items-center'>
+         < FaPlay  className='text-white text-xl'/>
+         <span className='truncate text-sm text-white '>Motion</span>  
          </div>
           </a>
           </li>

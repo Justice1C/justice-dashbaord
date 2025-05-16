@@ -15,20 +15,28 @@ import ghana from '../assets/ghana.jpg'
 const Navbar = ({ setOPen, open }) => {
   const [dropOpen, setDropOpen] = useState(false);
   const [profileDrop, setProfileDrop] = useState(false)
+  const [setting, setSetting] = useState(false)
 
   const handleProfile = () => {
     setProfileDrop(!profileDrop)
     setDropOpen(false)
+    setSetting(false)
   }
 
   const handleDrop = () => { 
     setDropOpen(!dropOpen)
     setProfileDrop(false)
-   
+   setSetting(false)
+  }
+
+  const handleSetting = () => {
+setSetting(!setting)
+setDropOpen(false)
+setProfileDrop(false)
   }
 
   return (
-    <nav className="sticky w-full top-2 flex justify-between items-center py-2 bg-gray-800 rounded-md px-2 shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)]">
+    <nav className=" sticky w-full top-2 flex justify-between items-center py-2 bg-gray-800 rounded-md px-2 shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] ">
       <div className="flex space-x-6 items-center">
         <div onClick={() => setOPen(!open)}>
           {open ? (
@@ -44,7 +52,7 @@ const Navbar = ({ setOPen, open }) => {
       <div className="flex space-x-6 items-center">
         <IoMdSettings
           className="text-blue-500 text-3xl bg-black p-1 rounded-full shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] hover:bg-gray-500"
-         
+         onClick={handleSetting}
         />
         <img
           src={naija}
@@ -56,6 +64,10 @@ const Navbar = ({ setOPen, open }) => {
       </div>
 
       {/* Dropdown */}
+<div className={`${setting? '' : ''}`}>
+
+</div>
+
       <div
         className={`absolute top-16 right-5 bg-gray-700 rounded-md p-4 z-10 shadow-[0_0_5px_6px_black,inset_0_0_10px_4px_rgba(0,0,0,0.5)] 
           transition-all duration-500 ease-in-out transform 
